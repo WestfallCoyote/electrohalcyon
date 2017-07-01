@@ -80,16 +80,15 @@
     }
     
 </head>
-<body>
+<body onload="resizeVideoPage();>
 
-   <script>
-    var windowWidth = 400;
-    var windowHeight = 200;
-    var xPos = (screen.width/2) - (windowWidth/2);
-    var yPos = (screen.height/2) - (windowHeight/2);
-    window.open("popup.html","POPUP","width=" 
-    + windowWidth+",height="+windowHeight +",left="+xPos+",top="+yPos);
-</script>
+<script language="javascript">
+
+  function resizeVideoPage(){
+    resizeTo(100,100);
+    window.focus();
+  }
+</script> 
    
 <center>
     <div id="dingdong">
