@@ -81,12 +81,16 @@
     
 </head>
 <body>
-<SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
-function newWindow(newContent)
- {
-  winContent = window.open(newContent, 'nextWin', 'right=10, top=20, width=600, height=600, toolbar=no scrollbars=no, resizable=no');
- }
-</SCRIPT>
+
+   <script>
+    var windowWidth = 400;
+    var windowHeight = 200;
+    var xPos = (screen.width/2) - (windowWidth/2);
+    var yPos = (screen.height/2) - (windowHeight/2);
+    window.open("popup.html","POPUP","width=" 
+    + windowWidth+",height="+windowHeight +",left="+xPos+",top="+yPos);
+</script>
+   
 <center>
     <div id="dingdong">
         <p>hi i'm josh</p>
