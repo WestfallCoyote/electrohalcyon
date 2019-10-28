@@ -1,7 +1,28 @@
 <!DOCTYPE html>
+<script type="text/javascript">
+  function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+</script>
 <head>
 <style>
-
     * {
         cursor: crosshair;
         font-family: Arial;
@@ -11,44 +32,117 @@
         color: white;
         size: 1em;
         background-attachment: fixed ! important;
-        background-image: url("https://i.imgur.com/bGLcJtP.jpg") ! important;
+        background-image: url("https://i.pinimg.com/originals/18/62/fa/1862faf8dd8dacb6f7698349ffba6a07.jpg") ! important;
         background-size: 100% 100%;
 	}
-
     p {
         margin-left: 10px;
         margin-right: 10px;
         font-size: .8em;
     	}   
+   li {
+       font-size: .8em;
+       float: none;
+   }
     
     #dingdong {
         border: 2px solid gray;
         height: auto;
         position: absolute;
         top: 50%;
-        transform: translate(200%, -80%);
+        transform: translate(200%, -40%);
         border-top-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.8);
         width: 30%;
     }
     
     h3 {
         font-family: Helvetica;
+        color: turquoise;
     }
+
+    #mods
+      color: turquoise;
+
+    .tab {
+  overflow: hidden;
+  border: none;
+  background-color: none;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  color: white;
+  background-color: gray;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 50px;
+  transition: 1s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #bb2606;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  border: 2px solid gray;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(200%, -40%);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 30%;
+}
 	</style>
 </head>
-<body onload="window.resizeTo(640,462);"></body>
-<body>   
+<body onload="window.resizeTo(640,462);">   
 <center>
-    <div id="dingdong">
-	<p><b>taurus, 20, engaged</b></p>
-	<hr>
-	    <p>fuck watcha heard</p>
-	    <p>old school cool civics are my life</p>
-	    <p>programmer, professional google mechanic, aspiring musician, jack of all trades</p>
-        <p></p>
-    </div>
-</center>
-	
-<iframe width="0" height="0" src="https://www.youtube.com/embed/9cD84cU7hcE&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="tab">
+<button class="tablinks" onclick="openCity(event, 'London')">myself</button>
+<button class="tablinks" onclick="openCity(event, 'Paris')">my car</button>
+<button class="tablinks" onclick="openCity(event, 'Tokyo')">my life</button>
+</div>
+
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+<h3>about me</h3>
+<p>i have passions for lots of things, like cars, music, programming,
+  circuitry, fabrication... the list goes on.</p>
+<p>i work on and build cars, that's where my heart lies most. despite
+the hate i get, hondas always been somethin special to me, even if
+most are a bit anemic... stock. ;)</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+<h3>my car</h3>
+<hr>
+<p><b>1991 EF Hatch</b></p>
+<p>MODS</p>
+    <p>CAI, full 3" exhaust with high flow cat, 4-2-1 headers, coilovers,
+      innovative mounts, innovative track bar, half core radiator, 10" sub
+      with pioneer speakers all around, chassis stiffening bars front and rear,
+      HID headlights</p>
+<p>PLANS</p>
+  <p>forced induction, built and swapped with D16A6, custom arduino powered
+    LED cluster, speeduino, tein coilovers, Si manifold swap, RPF1s</p>  
+</div>
+
+<div id="Tokyo" class="tabcontent">
+<h3>trash man</h3>
+<p>my name is josh, i'm 20 years old, and i'm from texas. currently,
+out here in colorado, but i miss the lone star more and more everyday.
+cdl driver, currently, along with whatever brings in the cash. if you
+wanna know anything more just hmu. 🤙</p>
+</div>
