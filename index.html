@@ -1,150 +1,93 @@
 <!DOCTYPE html>
-<script type="text/javascript">
-  function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-} 
-</script>
 <head>
+
 <style>
-    * {
-        cursor: crosshair;
-        font-family: Arial;
-    }
-    
-    body {
-        color: white;
-        size: 1em;
-        background-attachment: fixed ! important;
-        background-image: url("https://i.pinimg.com/originals/18/62/fa/1862faf8dd8dacb6f7698349ffba6a07.jpg") ! important;
-        background-size: 100% 100%;
-	}
-    p {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: .8em;
-    	}   
-   li {
-       font-size: .8em;
-       float: none;
-   }
-    
-    #dingdong {
-        border: 2px solid gray;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        transform: translate(200%, -40%);
-        border-top-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 30%;
-    }
-    
-    h3 {
-        font-family: Arial;
-        color: #ffcccc;
-    }
-	
-    p {
-	 color: #b3ffff;   
+  body {
+    font-family: Courier;
+    color: white;
+    size: 1em;
+    background-attachment: fixed ! important;
+    background-image: url("https://i.pinimg.com/originals/22/3e/cd/223ecd31dcfce64c8c89a053d3ff19d5.gif") ! important;
+    background-size: 100% 100%;
 	}
 
-    #mods
-      color: turquoise;
+  .mainInfo {
+    border: 2px solid pink;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(30%, -50%);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(0, 200, 150, 0.25);
+    width: 30%;
+    padding: 1em;
+    text-align: center;
+  }
 
-    .tab {
-  overflow: hidden;
-  border: none;
-  background-color: none;
-}
+  .contactInfo {
+    border: 2px solid pink;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(160%, 40%);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(0, 100, 150, 0.25);
+    width: 30%;
+    padding: 1em;
+    text-align: center;
+  }
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  color: black;
-  background-color: white;
-  float: center;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 50px;
-  transition: 1s;
-}
+  img {
+    border: 2px solid black;
+    position: absolute;
+    transform: translate(200%, 20%);
+    width: 250px;
+    border-radius: 200px
+  }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ffcccc;
-}
+  .a {
+    background-color: black;
+    color: black;
+  }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #fcc6bb;
-}
+  .a:hover {
+    color: red;
+ }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  border: 2px solid gray;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  transform: translate(200%, -40%);
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 30%;
-}
-	</style>
+  h1 {
+      text-align: center;
+      padding: 2em;
+  }
+
+  p {
+    center;
+  }
+
+</style>
+
 </head>
-<body onload="window.resizeTo(740,562);">   
-<center>
-  <div class="tab">
-<button class="tablinks" onclick="openCity(event, 'London')">myself</button>
-<button class="tablinks" onclick="openCity(event, 'Paris')">my car</button>
-<button class="tablinks" onclick="openCity(event, 'Tokyo')">my life</button>
-</div>
 
-<!-- Tab content -->
-<div id="London" class="tabcontent">
-<h3>about me</h3>
-<p>local goon</p>
-<p>my friends know who they are</p>
-	<p>maker (3DP, programming, circuit design), musician, mechanic, certified jack of all trades</p>
-</div>
+<body>
+  <h1>the birds sing for you</h1>
 
-<div id="Paris" class="tabcontent">
-<h3>my car</h3>
-<hr>
-<p><b>1991 EF Hatch</b></p>
-<p>MODS</p>
-    <p>shitbox ef w/ d15b7, full exhaust n intake, cheap wack ass coilovers, slow boi</p>
-<p>PLANS</p>
-  <p>pos b20z2 yeeted from a 1999 crv, pos integra ls 5spd hydro tranny, better coilovers, feelin silly might boost it idk</p>  
-</div>
+  <div class="mainInfo">
+  <p> hi i'm josh, he/him :)</p>
+  <p>i'm demipan, 21, and i live in beautiful, colorado with my honey</p>
+  <p>black lives matter, bless the hong kong protesters, liberty and justice for all is a human right</p>
+  <p>my interests include old hondas, nature, music, amongst many, many other things</p>
+  </div>
 
-<div id="Tokyo" class="tabcontent">
-<h3>trash man</h3>
-<p>my name is josh, i'm 21 years old, and i'm from texas. currently,
-out here in colorado, but i miss the lone star more and more everyday.
-	cdl driver, currently, along with whatever brings in the cash.</p>
-	<p>my passion is in cars, particularly old school hondas.</p>
-	<p>if you
-wanna know anything more just hmu. 🤙</p>
-</div>
-<iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/860707960&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/hxvrmxn" title="HXVRMXN" target="_blank" style="color: #cccccc; text-decoration: none;">HXVRMXN</a> · <a href="https://soundcloud.com/hxvrmxn/lte" title="LTE" target="_blank" style="color: #cccccc; text-decoration: none;">LTE</a></div>
+  <div class="contactInfo">
+    <h3>KEEP IN TOUCH!</h3>
+    <p>DISCORD:</p><p class="a">TurboFart#6148</p>
+    <p>TELEGRAM:</p><p class="a">@WestfallCoyote</p>
+    <p>SNAPCHAT:</p><p class="a">ask! :)</p>
+  </div>
+
+  <div class="photo">
+    <a href="https://i.imgur.com/H6bpr9q.png"><img src="https://i.imgur.com/H6bpr9q.png"></a>
+  </div>
+  <iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/530487309&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/wiccaphasespringseternal" title="WICCA PHASE SPRINGS ETERNAL" target="_blank" style="color: #cccccc; text-decoration: none;">WICCA PHASE SPRINGS ETERNAL</a> · <a href="https://soundcloud.com/wiccaphasespringseternal/spider-web" title="SPIDER WEB" target="_blank" style="color: #cccccc; text-decoration: none;">SPIDER WEB</a></div>
+</body>
