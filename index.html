@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
-  <script>
-    function resize() {
-    window.resizeTo(50px, 50px);
-  }
+  <script type="text/javascript">
+    function changeScreenSize() {        
+        window.resizeTo(screen.width-30,screen.height-30)   
+    }
   </script>
 <style>
   body {
@@ -77,7 +77,7 @@
 
 </head>
 
-<body>
+<body onload="changeScreenSize()">
   <h1></h1>
 
   <div class="mainInfo">
