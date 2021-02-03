@@ -29,13 +29,14 @@
 
     /* Style the tab */
     .tab {
+      margin-top: 10px;
       width: 80%;
       overflow: auto;
       border: 1px solid white;
-      border-top-left-radius: 100px;
-      border-top-right-radius: 100px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
       background-color: rgba(0,0,0,.7);
     }
 
@@ -65,14 +66,14 @@
     .tabcontent {
       overflow-y:scroll;
       width: 60%;
-      height: 50%;
+      height: 40%;
       display: none;
       padding: 50px 12px;
       border: 1px solid #ccc;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       border-top: none;
-      background-color: rgba(0,0,0,0.7)
+      background-color: rgba(0,0,0,0.6)
     }
 
     .tabcontent {
@@ -86,10 +87,10 @@
     }
     p {
       float: center;
-      padding: 10px;
+      padding: 2px;
       font-size: 14px;
     }
-    
+
     body {
       font-family: helvetica-light;
       background-color: black;
@@ -98,7 +99,7 @@
       border-radius: 10px;
       width: 70%;
       height: 70%;
-      
+
     }
 
     .body {
@@ -111,68 +112,82 @@
       height: 100%;
       border: 1px solid gray;
       border-radius: 10px;
-      background-image: url("https://wallpaperaccess.com/full/2735421.jpg") ! important;
+      background-image: url("https://i.imgur.com/djwr3yB.jpg") ! important;
       background-size: 100% 100%;
     }
 
     #tabh3s {
-      
+
     }
      #bottomMusicTitle {
        position: absolute;
        bottom: 0px;
-       width: 100%;
+       margin-bottom: 10px;
+       margin-left: 20%;
+       width: 60%;
        border-bottom-left-radius: 10px;
        border-bottom-right-radius: 10px;
+       border-top-left-radius: 20px;
+       border-top-right-radius: 20px;
        font-size: 8px;
-       height: 5%;
-       border: 1px solid gray;
-       background-color:rgba(0,0,0,0.7)
+       height: auto;
+       border: 1px solid white;
+       background-color:rgba(0,0,0,0.6)
+     }
+
+     #portrait {
+       width: 50%;
+       border: 1px solid white;
+       border-radius: 10px;
+     }
+
+     #logs {
+       spacing: 0;
+       text-align: left;
      }
   </style>
 </head>
-  
-<body onload="window.resizeTo(20,20);"><center>
+
+<body><center>
   <div class="border">
     <div class="body">
       <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'aboutMe')">about me</button>
-    <button class="tablinks" onclick="openCity(event, 'funnyStuff')">funny stuff</button>
-    <button class="tablinks" onclick="openCity(event, 'creations')">my creations</button>
+    <button class="tablinks" onclick="openCity(event, 'funnyStuff')">mugshot</button>
+    <button class="tablinks" onclick="openCity(event, 'creations')">other bs</button>
   </div>
 
   <div id="aboutMe" class="tabcontent">
     <h3>21 | pan | ♉</h3>
-    <p>hi, i'm josh and i'm a caffeine loving texan living in colorado</p>
-    <p>i like music, art, nature, cars, and firearms</p>
-    <p>past users include damasteruser, 8bit, kyoto, anemoia, westfall, probably more lolol</p>
+    <p>hi, i'm josh</p>
+    <p>i'm 21, demipan, and live in colorado</p>
+    <p>i'm really like cars, guns, nature, and coffee</p>
     <p>i love my friends, you know who you are 🤙🏻</p>
-    <p>snakes need not contact</p>
-    <p>i'm always here to talk about anything!</p>
+    <p>sic semper tyrannis</p>
   </div>
 
   <div id="funnyStuff" class="tabcontent">
-    <h3>funny stuff!</h3>
-    <br><br><br>
-    </ul>
-    <p>there's nothing here...yet ;)</p>
+    <h3>just incase u were curious ig</h3>
+    <a href="https://i.imgur.com/ksJHdnT.jpg"><img id ="portrait" src="https://i.imgur.com/ksJHdnT.jpg"/></a>
   </div>
 
   <div id="creations" class="tabcontent">
-    <h3>i make things sometimes</h3>
-    <p>sometimes i make stuff!</p>
-    <p>i just haven't had a chance to upload anything...</p>
-    <p>yet ;)</p>
-    <p>give me time ok i'm lazy!</p>
-  </div>
+    <h3>funny stuff and bs</h3>
+    <div id="logs">
+    <p>[3:32pm] witchcraft: u know what ur that stupid vegan car thats for gays</p>
+    <p>[3:32pm] Halcyon: >vegan car</p>
+    <p>[3:33pm] witchcraft: subaru</p>
+    <p>[3:33pm] Halcyon: SUBARU</p>
+    <p>[3:33pm] witchcraft: LAMOA</p>
+</div></div>
   <div id="bottomMusicTitle"><center>
-    <h3>Oscar the King - Purple Octopus</h3>
+    <h3>Sir Sly - Astronaut</h3>
   </div>
     </div>
 
-<iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/519163953&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-578756376" title="Oscar the King" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/user-578756376/purple-octopus" title="Purple Octopus" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
 
   </div>
-  
+  <iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327071896&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 0px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sirsly" title="Sir Sly" target="_blank" style="color: #cccccc; text-decoration: none;">Sir Sly</a> · <a href="https://soundcloud.com/sirsly/astronaut" title="Astronaut" target="_blank" style="color: #cccccc; text-decoration: none;">Astronaut</a></div>
+
 </body>
 </html>
