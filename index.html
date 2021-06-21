@@ -1,88 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Rajdhani">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vollkorn">
   <style>
 
-    p {
-      float: center;
-      padding: 2px;
-      font-size: 14px;
-    }
-
-    h3{
-      color: black;
-    }
-
     body {
-      font-family: Rajdhani;
-      background-color: black;
-      color: black;
-      position: fixed;
-      border-radius: 10px;
-      width: 70%;
-      height: 70%;
-
-    }
-
-    .body {
+      font-family: Vollkorn;
+      background-color:rgba(60,60,60,1);
+      color: white;
       position: absolute;
-      top: 30%;
-      left: 30%;
-      margin-top: -0px;
-      margin-left: -50px;
-      width: 100%;
+      border: 
+
+    }
+
+    .mainBox {
+      position: fixed;
+      width: 80%;
       height: 80%;
-      border: 1px solid gray;
-      border-radius: 10px;
-      background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1009312229234968672/6E0CF288ABFC2C73838A2AB91478AAECC10DF685/") ! important;
+      right: 10%;
+      top: 10%;
+      background-image: url("https://i.imgur.com/NfA3kRg.jpg") ! important;
       background-size: 100% 100%;
+      border-radius: 10px;
+      border: 1px solid gray;
+      overflow: hidden;
+      
+    }
+
+    #leftDiv {
+      padding: 20px;
+      position: absolute;
+      border: 1px solid gray;
+      border-radius: 20px;
+      left: 25px;
+      top: 30%;
+      width: 200px;
+      height: auto;
+      background-color:rgba(0,0,0,0.3);
+      text-align: center;
+      overflow: hidden;
+      
+    }
+
+    #rightDiv {
+      position: absolute;
+      right: 25px;
+      top: 30%;
+      width: 250px;
+      height: auto;
+      text-align: center;
+    }
+
+    .preston {
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      font-size: 12px;
     }
 
 
-     #mainBox {
-       overflow: hidden;
-       border: 1px solid black;
-       border-radius: 20px;
-       width: 40%;
-       height: auto;
-       margin: auto;
-       width: 50%;
-       color: white;
-       background-color: rgba(0, 0, 0, .6);
-       padding: 10px;
-     }
-
-     #icon {
-      width: 40%;
-      border: 1px solid gray;
-      border-radius: 10px; 
-     }
-     
-     
   </style>
-  
-  <script language="javascript">
-
-  function resizeVideoPage(){
-    var width = 600;
-    var height = 400;
-    window.resizeTo(width, height);
-    window.moveTo(((screen.width - width) / 2), ((screen.height - height) / 2));      
-  }
-</script>
 </head>
 
-<body onload="resizeVideoPage();">
-  <div class="border">
-    <div class="body">
-      <center><h1>reddest chops in the west.</h1>
-      <div id="mainBox">
-        <p>my name is josh, i'm 22 years old,  and i live in colorado!</p>
-        <p>i enjoy guns, coffee, hiking adventures, and talking with friends!</p>
-        <p>✨porkchop's absolute beefcake✨</p>
-        </div>
+<body>
+  <div class="mainBox">
+    <div class="w3-animate-opacity" id="leftDiv">
+      <p>helo, i'm josh!</p>
+      <p>i'm 22, live in colorado, and like lots of things</p>
+      <p>i am porkchops absolute beefcake</p>
+      <p>art by tulameen, char by psyche</p>
+    </div>
+    <div class="w3-animate-opacity" id="rightDiv">
+      <img class="preston" src="https://i.imgur.com/qGZxjjd.png">
+    </div>
   </div>
-<iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/635598375&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/caravan-palace-official" title="Caravan Palace" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/caravan-palace-official/plume" title="Plume" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>      </body>
+  <iframe width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/635598687&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/caravan-palace-official" title="Caravan Palace" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/caravan-palace-official/leena-1" title="Leena" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
+ </body>
 </html>
