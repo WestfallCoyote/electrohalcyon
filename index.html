@@ -3,54 +3,55 @@
   <head>
 
     <script type="text/javascript">
-    function openButt(evt, cityName) {
-      // Declare all variables
+    function openButt(evt, tabVar) {
+      // var declaration
       var i, tabcontent, tablinks;
 
-      // Get all elements with class="tabcontent" and hide them
+      // grabs all tabcontent class divs and hides them
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
 
-      // Get all elements with class="tablinks" and remove the class "active"
+      // remove active classes from tablink classes
       tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
 
-// Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabVar).style.display = "block";
   evt.currentTarget.className += " active";
     }
     </script>
-    
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
-    
+
     <style>
-
-    .movingBorder {
-      background-image: linear-gradient(90deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(90deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(0deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(0deg, rgb(112, 248, 172) 50%, transparent 50%);
-      background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-      background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
-      background-position: left top, right bottom, left bottom, right   top;
-      animation: border-dance 1s infinite linear;
-    }
-    @keyframes border-dance {
-      0% {
-        background-position: left top, right bottom, left bottom, right   top;
-      }
-      100% {
-        background-position: left 30px top, right 30px bottom , left bottom 30px , right   top 30px;
-      }
-    }
-  
-
+    
     html {
       overflow: hidden;
     }
-    
+
+    body {
+      background-color: black;
+      font-family: VT323;
+      color: rgb(112, 248, 172);
+      position: absolute;
+    }
+
+    h1 {
+      margin-left: 80px;
+      margin-right: 80px;
+      font-family: VT323;
+      color: rgb(0, 255, 255);
+    }
+
+    button {
+      align-items: center;
+      color: inherit;
+    }
+
     #div1 {
       position:absolute;
       top:9px;
@@ -58,7 +59,7 @@
       height:600px;
       width:600px;
       background-color: black;
-      border-radius: 5px; 
+      border-radius: 5px;
     }
 
     #div2 {
@@ -74,47 +75,47 @@
       border: 2px solid black;
     }
 
-    body {
-      background-color: black;
-      font-family: VT323;
-      color: rgb(112, 248, 172);
-      position: absolute;
+    #verticalWarning {
+      position: fixed;
+      left: 650px;
+      top: 150px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .movingBorder {
+      background-image: linear-gradient(90deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(90deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(0deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(0deg, rgb(112, 248, 172) 50%, transparent 50%);
+      background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+      background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+      background-position: left top, right bottom, left bottom, right   top;
+      animation: border-dance 1s infinite linear;
     }
 
     .tab {
       position: absolute;
       bottom: 0%;
-      width: auto;
-      left: 33%;
-      overflow: hidden; 
-      border: 2px solid black;
+      left: 22%;
+      overflow: hidden;
       background-color: black;
-    }
+    } 
 
-/* Style the buttons that are used to open the tab content */
     .tab button {
       position: relative;
-      width: 100px;
       background-color: black;
-      float: center;
       border: 1px solid rgb(112, 248, 172);
       outline: none;
-      cursor: pointer;
-      padding: 8px 16px;
-      transition: 0.3s;
+      padding: 5px 30px;
+      transition: .2s;
     }
 
-/* Change background color of buttons on hover */
     .tab button:hover {
       background-color: rgba(30, 30, 30, 0.9);
     }
 
-/* Create an active/current tablink class */
     .tab button.active {
       background-color: rgba(60, 60, 60, 0.9);
     }
 
-/* Style the tab content */
     .tabcontent {
       animation: fadeEffect 1s; /* Fading effect takes 1 second */
       width: 60%;
@@ -125,67 +126,78 @@
       display: none;
       padding: 6px 12px;
       border-top: none;
-      text-align: center; 
-    }
-
-    button{
-      align-items: center;
-      color: inherit;
+      text-align: center;
     }
 
     .outOfBounds {
       color: red;
     }
 
-    #verticalWarning {
-      position: fixed;
-      left: 650px;
-      top: 150px;
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
+    .blink_me {
+      animation: blinker 2s linear infinite;
+    }
+
+    @keyframes border-dance {
+      0% {
+        background-position: left top, right bottom, left bottom, right   top;
+      }
+      100% {
+        background-position: left 30px top, right 30px bottom , left bottom 30px , right   top 30px;
+      }
     }
 
     @keyframes fadeEffect {
       from {opacity: 0;}
       to {opacity: 1;}
     }
-    
+
+    @keyframes blinker {
+      20% {
+        opacity: .1;
+      }
+    }
+
     </style>
 
     <meta charset="utf-8">
-    
+
     <title></title>
-  </head> 
+  </head>
   <body>
-    <div id="div1" class="movingBorder"/> 
+    <div id="div1" class="movingBorder"/>
     <div id="div2"/>
+    <h1 class="blink_me"><center>BE NOT AFRAID</h1>
       <div class="tab">
-        <button class="tablinks" onclick="openButt(event, 'logs')">ABOUT</button>
-        <button class="tablinks" onclick="openButt(event, 'friends')">FRIENDS</button>
+        <button class="tablinks" onclick="openButt(event, 'logs')"><div style="color: rgb(0,255,255);">ABOUT</div></button>
+        <button class="tablinks" onclick="openButt(event, 'friends')"><div style="color: rgb(0,255,255);">FRIENDS</div></button>
+        <button class="tablinks" onclick="openButt(event, 'comms')"><div style="color: rgb(0,255,255);">COMMISSIONS</div></button>
       </div>
 
-      <div id="logs" class="tabcontent">
-        <p>JOSH//22//CO//TAURUS</p>
-        <p>I HAIL FROM TEXAS, I'M DEMIPAN, AND I DRINK TOO MUCH COFFEE</p>
-        <p>I LOVE TO LEARN, HIKE, BIKE, WORK ON CARS, AND TALK ABOUT ANYTHING</p>
-      </div>
-
+  <div id="logs" class="tabcontent">
+    <p>JOSH//22//CO//TAURUS</p>
+    <p>I HAIL FROM TEXAS, I'M DEMIPAN, AND I DRINK TOO MUCH COFFEE.</p>
+    <p>I LOVE TO LEARN, HIKE, BIKE, WORK ON CARS, AND TALK ABOUT ANYTHING.</p>
+  </div>
 
   <div id="friends" class="tabcontent">
     <p>TO THE PEOPLE WHO MEAN THE MOST,<p>
-    <p>YOU SURELY KNOW WHO YOU ARE</p>
-    <p>THANK YOU FOR THAT ALL YOU DO, I LOVE YOU.</p> 
+    <p>YOU SURELY KNOW WHO YOU ARE.</p>
+    <p>THANK YOU FOR THAT ALL YOU DO, I LOVE YOU.</p>
   </div>
 
-  
+  <div id="comms" class="tabcontent">
+    <p>I NOW TAKE SNIFF COMMISSIONS.</p>
+    <p>NO BLATANT WATERMARKS. NO SUBSCRIPTIONS. NO BULLSHIT.</p>
+    <p>FRIENDLY, CLEAN CODE, TO AID IN DIY ADJUSTMENTS LATER.</p>
+    <p>PRICES FOR Δ IS 1.5x CASH PRICE.</p>
+  </div>
 
 </div>
 <br>
 <p class="outOfBounds" style="text-align: center;">!!! please resize the window so you cannot see this text !!!</p>
-<p class="outOfBounds" id="verticalWarning"> !!! please adjust the window so you cannot see this text !!!</p>
+<p class="outOfBounds" id="verticalWarning"> !!! please adjust the window so you cannot see this text !!! </p>
 
-    
   </body>
 </html>
-<script src="https://www.youtube.com/player_api"></script><div class="gaf210imvustylez_youtubebox" style="width:1px;height:1px;overflow:hidden"><iframe id="gaf210_youtube_invisible" allow="autoplay" width="300" height="300" src="https://www.youtube.com/embed/LQ9IiEmvZpw?autoplay=1&amp;loop=1&amp;playlist=LQ9IiEmvZpw" frameborder="0" allowfullscreen></iframe><!--Youtube player code made @ https://gafcodes.com --></div><script src="https://code.jquery.com/jquery.min.js"></script><script>$("#gaf210_youtube_invisible").on("load",function(){gaf210_youtube_invisible=new YT.Player(this,{events:{'onReady':function(event){event.target.playVideo()}}})});</script>
 
+<script src="https://www.youtube.com/player_api"></script><div class="gaf210imvustylez_youtubebox" style="width:1px;height:1px;overflow:hidden"><iframe id="gaf210_youtube_invisible" allow="autoplay" width="300" height="300" src="https://www.youtube.com/embed/VY6Juy9aaiY?autoplay=1&amp;loop=1&amp;playlist=VY6Juy9aaiY" frameborder="0" allowfullscreen></iframe><!--Youtube player code made @ https://gafcodes.com --></div><script src="https://code.jquery.com/jquery.min.js"></script><script>$("#gaf210_youtube_invisible").on("load",function(){gaf210_youtube_invisible=new YT.Player(this,{events:{'onReady':function(event){event.target.playVideo()}}})});</script>
