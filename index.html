@@ -3,23 +3,24 @@
   <head>
 
     <script type="text/javascript">
-    function openButt(evt, tabVar) {
-      // var declaration
+    function openButt(evt, cityName) {
+      // Declare all variables
       var i, tabcontent, tablinks;
 
-      // grabs all tabcontent class divs and hides them
+      // Get all elements with class="tabcontent" and hide them
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
 
-      // remove active classes from tablink classes
+      // Get all elements with class="tablinks" and remove the class "active"
       tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
 
-  document.getElementById(tabVar).style.display = "block";
+// Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
     }
     </script>
@@ -28,28 +29,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
 
     <style>
-    
+
+    .movingBorder {
+      background-image: linear-gradient(90deg, gray 50%, transparent 50%), linear-gradient(90deg, gray 50%, transparent 50%), linear-gradient(0deg, gray 50%, transparent 50%), linear-gradient(0deg, gray 50%, transparent 50%);
+      background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+      background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+      background-position: left top, right bottom, left bottom, right   top;
+      animation: border-dance 1s infinite linear;
+    }
+    @keyframes border-dance {
+      0% {
+        background-position: left top, right bottom, left bottom, right   top;
+      }
+      100% {
+        background-position: left 30px top, right 30px bottom , left bottom 30px , right   top 30px;
+      }
+    }
+
+
     html {
       overflow: hidden;
-    }
-
-    body {
-      background-color: black;
-      font-family: VT323;
-      color: rgb(112, 248, 172);
-      position: absolute;
-    }
-
-    h1 {
-      margin-left: 80px;
-      margin-right: 80px;
-      font-family: VT323;
-      color: rgb(0, 255, 255);
-    }
-
-    button {
-      align-items: center;
-      color: inherit;
     }
 
     #div1 {
@@ -58,7 +57,7 @@
       left:9px;
       height:600px;
       width:600px;
-      background-color: black;
+      background-color: rgb(22,22,22);
       border-radius: 5px;
     }
 
@@ -68,11 +67,77 @@
       left:-1px;
       height:602px;
       width:602px;
-      background-color: white;
+      background-color: rgb(22,22,22);
       border-radius: 100px;
-      background-image: url("https://images.squarespace-cdn.com/content/v1/5c9c1469fd679308cc3fb32e/1568273309136-5K2HGUSHC5AAOQH5UKIC/C_Users_mlani_Documents_OsciStudioFIles_dootdootbeat_8_26_2019_12_11_41_PM_3.gif") ! important;
+      background-image: url("https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/08/cirlcemountain-e1565066585892.jpg?auto=format&q=60&fit=max&w=930") ! important;
       background-size: 100%, 100%;
+      border: 2px solid rgb(22,22,22);
+    }
+
+    body {
+      background-color: black;
+      font-family: VT323;
+      color: white;
+      position: absolute;
+    }
+
+    .tab {
+      position: absolute;
+      bottom: 0%;
+      width: auto;
+      left: 33%;
+      overflow: hidden;
       border: 2px solid black;
+      background-color: black;
+    }
+
+/* Style the buttons that are used to open the tab content */
+    .tab button {
+      position: relative;
+      width: 100px;
+      background-color: black;
+      float: center;
+      border: 1px solid gray;
+      outline: none;
+      cursor: pointer;
+      padding: 8px 16px;
+      transition: 0.3s;
+    }
+
+/* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: rgba(30, 30, 30, 0.9);
+    }
+
+/* Create an active/current tablink class */
+    .tab button.active {
+      background-color: rgba(60, 60, 60, 0.9);
+    }
+
+/* Style the tab content */
+    .tabcontent {
+      animation: fadeEffect 1s; /* Fading effect takes 1 second */
+      width: 54%;
+      height: 54%;
+      left: 23%;
+      top: 23%; 
+      position: absolute;
+      display: none;
+      padding: 6px 12px;
+      border-top: none;
+      text-align: center;   
+      background-color: rgba(0,0,0,0.8);
+      border: 15px solid black;
+      border-radius: 500px;
+    }
+
+    button{
+      align-items: center;
+      color: inherit;
+    }
+
+    .outOfBounds {
+      color: red;
     }
 
     #verticalWarning {
@@ -83,76 +148,23 @@
       text-orientation: mixed;
     }
 
-    .movingBorder {
-      background-image: linear-gradient(90deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(90deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(0deg, rgb(112, 248, 172) 50%, transparent 50%), linear-gradient(0deg, rgb(112, 248, 172) 50%, transparent 50%);
-      background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-      background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
-      background-position: left top, right bottom, left bottom, right   top;
-      animation: border-dance 1s infinite linear;
+    @keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
-    .tab {
-      position: absolute;
-      bottom: 0%;
-      left: 22%;
-      overflow: hidden;
-      background-color: black;
-    } 
-
-    .tab button {
-      position: relative;
-      background-color: black;
-      border: 1px solid rgb(112, 248, 172);
-      outline: none;
-      padding: 5px 30px;
-      transition: .2s;
-    }
-
-    .tab button:hover {
-      background-color: rgba(30, 30, 30, 0.9);
-    }
-
-    .tab button.active {
-      background-color: rgba(60, 60, 60, 0.9);
-    }
-
-    .tabcontent {
-      animation: fadeEffect 1s; /* Fading effect takes 1 second */
-      width: 60%;
-      height: 50%;
-      left: 20%;
-      position: absolute;
-      top: 10%;
-      display: none;
-      padding: 6px 12px;
-      border-top: none;
-      text-align: center;
-    }
-
-    .outOfBounds {
-      color: red;
+    h1 {
+      margin-left: 40px;
+      margin-right: 40px;
+      font-family: VT323;
     }
 
     .blink_me {
       animation: blinker 2s linear infinite;
     }
 
-    @keyframes border-dance {
-      0% {
-        background-position: left top, right bottom, left bottom, right   top;
-      }
-      100% {
-        background-position: left 30px top, right 30px bottom , left bottom 30px , right   top 30px;
-      }
-    }
-
-    @keyframes fadeEffect {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
     @keyframes blinker {
-      20% {
+      15% {
         opacity: .1;
       }
     }
@@ -166,31 +178,30 @@
   <body>
     <div id="div1" class="movingBorder"/>
     <div id="div2"/>
-    <h1 class="blink_me"><center>BE NOT AFRAID</h1>
+    <h1 class="blink_me"><center>STAY FROSTY</h1>
       <div class="tab">
-        <button class="tablinks" onclick="openButt(event, 'logs')"><div style="color: rgb(0,255,255);">ABOUT</div></button>
-        <button class="tablinks" onclick="openButt(event, 'friends')"><div style="color: rgb(0,255,255);">FRIENDS</div></button>
-        <button class="tablinks" onclick="openButt(event, 'comms')"><div style="color: rgb(0,255,255);">COMMISSIONS</div></button>
+        <button class="tablinks" onclick="openButt(event, 'logs')">ABOUT</button>
+        <button class="tablinks" onclick="openButt(event, 'friends')">FRIENDS</button>
       </div>
 
-  <div id="logs" class="tabcontent">
-    <p>JOSH//22//CO//TAURUS//PAN//QPPRSJ2021<3</p>
-  </div>
+      <div id="logs" class="tabcontent"> 
+        <br><br><br><br><br>
+        <p>JOSH - 22 - THEY/THEM - COLORADO - TAURUS</p>
+      </div>
+
 
   <div id="friends" class="tabcontent">
-    <p>TO THE PEOPLE WHO MEAN THE MOST,<p>
-    <p>YOU SURELY KNOW WHO YOU ARE.</p>
-    <p>THANK YOU FOR THAT ALL YOU DO, I LOVE YOU.</p>
+    <br><br><br><br><br>
+      <p>YOU KNOW WHO YOU ARE, THANKS FOR EVERYTHING. I LOVE YOU, FOLKS.</p>
   </div>
 
-  <div id="comms" class="tabcontent">
-    <p>NOT OPEN.</p>
-  </div>
+
 
 </div>
 <br>
 <p class="outOfBounds" style="text-align: center;">!!! please resize the window so you cannot see this text !!!</p>
-<p class="outOfBounds" id="verticalWarning"> !!! please adjust the window so you cannot see this text !!! </p>
+<p class="outOfBounds" id="verticalWarning"> !!! please adjust the window so you cannot see this text !!!</p>
+
 
   </body>
 </html>
