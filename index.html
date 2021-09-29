@@ -26,25 +26,9 @@
     </script>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Charm">
 
     <style>
-
-    .movingBorder {
-      background-image: linear-gradient(90deg, gray 50%, transparent 50%), linear-gradient(90deg, gray 50%, transparent 50%), linear-gradient(0deg, gray 50%, transparent 50%), linear-gradient(0deg, gray 50%, transparent 50%);
-      background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-      background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
-      background-position: left top, right bottom, left bottom, right   top;
-      animation: border-dance 1s infinite linear;
-    }
-    @keyframes border-dance {
-      0% {
-        background-position: left top, right bottom, left bottom, right   top;
-      }
-      100% {
-        background-position: left 30px top, right 30px bottom , left bottom 30px , right   top 30px;
-      }
-    }
 
 
     html {
@@ -57,7 +41,7 @@
       left:9px;
       height:600px;
       width:600px;
-      background-color: rgb(22,22,22);
+      background-color: black;
       border-radius: 5px;
     }
 
@@ -65,70 +49,73 @@
       position:relative;
       top:-1px;
       left:-1px;
-      height:602px;
-      width:602px;
-      background-color: rgb(22,22,22);
+      height:600px;
+      width:600px;
+      background-color: black;
       border-radius: 100px;
-      background-image: url("https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/08/cirlcemountain-e1565066585892.jpg?auto=format&q=60&fit=max&w=930") ! important;
+      background-image: url("https://i.imgur.com/qGD0kez.jpg") ! important;
       background-size: 100%, 100%;
-      border: 2px solid rgb(22,22,22);
+      border: 2px solid black;
     }
 
     body {
       background-color: black;
-      font-family: VT323;
+      font-family: Charm;
       color: white;
       position: absolute;
     }
 
+    p {
+      font-size: 1em;
+    }
+
     .tab {
       position: absolute;
-      bottom: 0%;
+      top: 5%;
       width: auto;
-      left: 33%;
+      left: 5%;
       overflow: hidden;
-      border: 2px solid black;
-      background-color: black;
+      border: 1px solid black;
+      background-color: none;
     }
 
 /* Style the buttons that are used to open the tab content */
     .tab button {
       position: relative;
       width: 100px;
-      background-color: black;
       float: center;
       border: 1px solid gray;
       outline: none;
       cursor: pointer;
       padding: 8px 16px;
       transition: 0.3s;
+      background-color: transparent;
     }
 
 /* Change background color of buttons on hover */
     .tab button:hover {
-      background-color: rgba(30, 30, 30, 0.9);
+      background-color: rgba(255, 255, 255, 0.2)
     }
 
 /* Create an active/current tablink class */
     .tab button.active {
-      background-color: rgba(60, 60, 60, 0.9);
+      background-color: rgba(255, 255, 255, 0.1)
     }
 
 /* Style the tab content */
     .tabcontent {
       animation: fadeEffect 1s; /* Fading effect takes 1 second */
-      width: 54%;
-      height: 54%;
-      left: 23%;
-      top: 23%; 
+      width: 40%;
+      height: 40%;
+      left: 50%;
+      top: 50%;
       position: absolute;
       display: none;
       padding: 6px 12px;
       border-top: none;
-      text-align: center;   
-      background-color: rgba(0,0,0,0.8);
-      border: 15px solid black;
-      border-radius: 500px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
     }
 
     button{
@@ -184,15 +171,19 @@
         <button class="tablinks" onclick="openButt(event, 'friends')">FRIENDS</button>
       </div>
 
-      <div id="logs" class="tabcontent"> 
-        <br><br><br><br><br>
-        <p>JOSH - 22 - THEY/THEM - COLORADO - TAURUS</p>
+      <div id="logs" class="tabcontent">
+        <p>hi, my name's josh! i'm 22, a taurus, and i live in colorado.</p>
+        <p>i like to go for hikes, listen to music, and smoke herbs. =]</p>
+        <p>i love meeting people and making new friends. say hi!</p>
+        <p>background photo by me. c=</p>
       </div>
 
 
   <div id="friends" class="tabcontent">
-    <br><br><br><br><br>
-      <p>YOU KNOW WHO YOU ARE, THANKS FOR EVERYTHING. I LOVE YOU, FOLKS.</p>
+      <p>gosh, i have some beautiful friends around here.</p>
+      <p>to my friends old, thanks for sticking around.</p>
+      <p>to those newer, thanks for being here.</p>
+      <p>let's go far, yeah?</p>
   </div>
 
 
@@ -205,5 +196,4 @@
 
   </body>
 </html>
-
-<script src="https://www.youtube.com/player_api"></script><div class="gaf210imvustylez_youtubebox" style="width:1px;height:1px;overflow:hidden"><iframe id="gaf210_youtube_invisible" allow="autoplay" width="300" height="300" src="https://www.youtube.com/embed/XJP1zBdjePY?autoplay=1&amp;loop=0&amp;start=6" frameborder="0" allowfullscreen></iframe><!--Youtube player code made @ https://gafcodes.com --></div><script src="https://code.jquery.com/jquery.min.js"></script><script>$("#gaf210_youtube_invisible").on("load",function(){gaf210_youtube_invisible=new YT.Player(this,{events:{'onReady':function(event){event.target.playVideo()}}})});</script>
+<script src="https://www.youtube.com/player_api"></script><div class="gaf210imvustylez_youtubebox" style="width:1px;height:1px;overflow:hidden"><iframe id="gaf210_youtube_invisible" allow="autoplay" width="300" height="300" src="https://www.youtube.com/embed/5e1zT7miep8?autoplay=1&amp;loop=1&amp;playlist=5e1zT7miep8" frameborder="0" allowfullscreen></iframe><!--Youtube player code made @ https://gafcodes.com --></div><script src="https://code.jquery.com/jquery.min.js"></script><script>$("#gaf210_youtube_invisible").on("load",function(){gaf210_youtube_invisible=new YT.Player(this,{events:{'onReady':function(event){event.target.playVideo()}}})});</script>
